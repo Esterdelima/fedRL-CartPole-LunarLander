@@ -1,28 +1,32 @@
-# Parallel Deep Reinforcement Learning with Federated Learning Framework
-The purpose of this project is to assess the effect of parallel training of multiple Deep Reinforcement Learning agents using the Federated Averaging (FedAVG) algorithm -- after training the agents for specific timesteps, all of the Deep Q Network models are aggregated by taking the average of their parameters and subsequently the averaged model will be set for all of the agents for more training rounds.
+# Federated Deep Reinforcement Learning Framework
 
-### Environments
-* CartPole
-* Lunar Lander
-* Super Mario Bros
+This project explores the application of **Federated Learning (FL)** to **Deep Reinforcement Learning (DRL)** by enabling multiple agents to train in parallel across different environments, sharing only model parameters. The aggregation is done using the **Federated Averaging (FedAvg)** algorithm.
 
-### Deep Reinforcement Learning Methods
-* Deep Q Network
-* Double Deep Q Network
+The goal is to assess whether federated training improves sample efficiency, performance, and generalization compared to single-agent training.
 
-## Experiments
-### 3 DQN Agents on Cartpole Environment
-![CP1](https://github.com/TroddenSpade/Federated-DQN/blob/main/results/CartPole/1/CartPole.png?raw=true)
-![CP2](https://github.com/TroddenSpade/Federated-DQN/blob/main/results/CartPole/2/Figure_2.png?raw=true)
+---
 
-### 3 DQN Agents on Lunar Lander Environment
-![LL](https://github.com/TroddenSpade/Federated-DQN/blob/main/results/LunarLander/lunarlander.png?raw=true)
+## 🚀 **Environments Supported**
+- ✅ **CartPole-v1** (Simple balance control)
+- ✅ **LunarLander-v2** (2D landing problem)
+- ✅ **Super Mario Bros** (Multi-level platformer — using worlds 1-1 to 1-4)
 
-### 4 DDQN Agents on Super Mario Bros 1-1 to 1-4
-![SMB](https://github.com/TroddenSpade/Federated-DQN/blob/main/results/Mario/rewards.png?raw=true)
+---
 
-| Env 1-1 | Env 1-2 |
-| :---: | :---: |
-|![1-2](https://github.com/TroddenSpade/Federated-DQN/blob/main/results/Mario/0.gif?raw=true) | ![1-4](https://github.com/TroddenSpade/Federated-DQN/blob/main/results/Mario/1.gif?raw=true) |
-| Env 1-3 | Env 1-4 |
-|![1-2](https://github.com/TroddenSpade/Federated-DQN/blob/main/results/Mario/2.gif?raw=true) | ![1-4](https://github.com/TroddenSpade/Federated-DQN/blob/main/results/Mario/3.gif?raw=true) |
+## 🧠 **Deep Reinforcement Learning Algorithms**
+- ✔️ **Deep Q-Network (DQN)**
+- ✔️ **Double DQN (DDQN)**
+
+---
+
+## 🏗️ **Project Structure**
+```plaintext
+├── pytorch/               → Core modules (Agent, Federator, QNetwork, Buffer, Env)
+├── results/               → Training logs, models, rewards, and plots
+├── main-cart.py           → Federated training on CartPole
+├── main-lun.py            → Federated training on LunarLander
+├── single-agent-cart.py   → Single-agent training on CartPole
+├── single-agent-lun.py    → Single-agent training on LunarLander
+├── Mario.ipynb            → Testing and evaluating federated models on Mario
+├── requirements.txt       → Dependencies
+├── README.md              → Project description and usage

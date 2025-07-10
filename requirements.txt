@@ -1,0 +1,16 @@
+# RL Core
+gymnasium==0.28.1
+numpy==1.24.4
+torch==2.0.1
+matplotlib==3.7.2
+tqdm==4.66.1
+
+# Mario-specific
+gym-super-mario-bros==7.3.0
+nes-py==8.2.1
+
+# Visão Computacional (para preprocessamento de imagens)
+torchvision==0.15.2
+
+# Outros utilitários
+pickle-mixin==1.0.2
